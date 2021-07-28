@@ -1,0 +1,165 @@
+:root {
+  --color-primary: hsl(223, 87%, 63%);
+  --color-secondary: hsl(223, 100%, 88%);
+  --color-soft-accent: hsl(354, 100%, 66%);
+  --color-grey: hsl(0, 0%, 59%);
+  --color-darkblue: hsl(209, 33%, 12%);
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-soft-background);
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Franklin", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.margin-and-padding-zero {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100vh;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.top__header {
+  margin-top: 5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header__logo {
+  margin-bottom: 4rem;
+  transform: scale(0.8);
+}
+
+.header__tittle {
+  font-weight: 400;
+  color: var(--color-grey);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.bold {
+  font-weight: 700;
+  color: black;
+}
+
+.header__subscribe {
+  color: var(--color-darkblue);
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.header__email {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-secondary);
+  margin-bottom: 1rem;
+  outline: 0;
+}
+
+::placeholder {
+  color: var(--color-secondary);
+  opacity: 0.7;
+  font-size: 1.3rem;
+}
+
+.header__btn {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  border: 0;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  box-shadow: 0 5px 10px hsla(223, 81%, 73%, 0.551);
+  transition: all 0.15s;
+}
+
+.header__btn:hover {
+  background-color: hsl(223, 81%, 73%);
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 1440px) {
+  .top__header {
+    display: grid;
+    justify-items: center;
+  }
+
+  .header__email {
+    width: 60%;
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    justify-self: start;
+    margin: 0 2rem;
+  }
+  .header__btn {
+    width: 30%;
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    justify-self: end;
+    margin: 0 2rem;
+  }
+}
+
+.middle__img {
+  margin-top: ;
+  width: 100%;
+}
+
+.bottom__section {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.fab {
+  margin: 2rem 1rem;
+  font-size: 1.5rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 100%;
+  color: var(--color-primary);
+  padding: 0.7rem;
+  transition: all 0.25s;
+}
+
+.fab:hover {
+  color: #fff;
+  background-color: var(--color-primary);
+  transform: scale(1.5);
+}
+
+.fa-facebook-f {
+  padding: 0.7rem 1rem;
+}
+
+.copyright {
+  color: var(--color-grey);
+}
